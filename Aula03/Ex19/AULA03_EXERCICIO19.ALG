@@ -9,10 +9,10 @@ Algoritmo "Aula03_Exercicio19"
 // Data atual  : 07/08/2026
 Var
    // Seção de Declarações das variáveis
-   saldo : real
-   sacar : real
-   encerrar : caractere
-   valor_sacado : real
+   saldo : real // Saldo do usuário
+   sacar : real // sacar o dinheiro
+   encerrar : caractere // encerrar o loop
+   valor_sacado : real // valor sacado
 
 
 Inicio
@@ -20,14 +20,14 @@ Inicio
    escrevaL("Informe o seu saldo: ")
    leia(saldo)
 
-   se saldo = 0 entao
+   se saldo = 0 entao // verificar se o usuário possui saldo
       escreval("Você não possui saldo!")
    fimse
-   enquanto (saldo > 0) faca
+   enquanto (saldo > 0) faca // saldo tem que ser maior que zero pra sacar
       escreval("Quanto deseja sacar?")
       leia(sacar)
       se (saldo >= sacar) entao
-         saldo <- saldo - sacar
+         saldo <- saldo - sacar  // diminuir o saldo pelo valor do saque
          escreval("Valor sacado:R$", sacar)
          escreval("Saldo:R$",saldo)
          escreval("-----------------")
@@ -36,7 +36,7 @@ Inicio
       fimse
       escreval("Deseja encerrar?(Sim/Não)")
       leia(encerrar)
-      se encerrar = "Sim" entao
+      se encerrar = "Sim" entao  // Parar o loop
          saldo <- 0
       fimse
 

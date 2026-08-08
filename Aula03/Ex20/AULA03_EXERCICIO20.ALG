@@ -8,12 +8,12 @@ Algoritmo "Aula03_Exercicio20"
 // Data atual  : 07/08/2026
 Var
    // Seção de Declarações das variáveis
-   cliente : inteiro
-   media : real
-   nota : real
-   soma : real
-   qtd_nota5 : inteiro
-   qtd_nota1 : inteiro
+   cliente : inteiro  // Quantidades de clintes
+   media : real       // Média da nota
+   nota : real     // nota de avaliação
+   soma : real     // somar as notas
+   qtd_nota5 : inteiro  // quantidade de nota 5
+   qtd_nota1 : inteiro   // quantidade de nota 1
 
 
 
@@ -22,8 +22,9 @@ Inicio
    // Seção de Comandos, procedimento, funções, operadores, etc...
    escreval("Informe a nota:(1 a 5)")
    leia(nota)
-   cliente <- 1
+   cliente <- 1   // Primeiro cliente colocando a nota
    soma <- nota
+   // Verificar se a nota é 1 ou 5
    se nota = 5 entao
       qtd_nota5 <- 1
    senao
@@ -35,8 +36,8 @@ Inicio
    enquanto nota > 0 faca
       escreval("Informe a nota:(1 a 5)")
       leia(nota)
-      cliente <- cliente + 1
-      soma <- soma + nota
+      cliente <- cliente + 1 // contando os clientes
+      soma <- soma + nota     // somando as notas
       se nota = 5 entao
          qtd_nota5 <- qtd_nota5 + 1
       senao
@@ -47,7 +48,7 @@ Inicio
 
    fimenquanto
    
-   media <- soma / cliente
+   media <- soma / cliente  // Calcular a média das notas
 
    escreval("Quantidade de respostas:", cliente:0:2)
    escreval("Média das notas:", media)

@@ -6,11 +6,11 @@ Algoritmo "Aula03_Exercicio17"
 // Data atual  : 07/08/2026
 Var
    // Seção de Declarações das variáveis
-   alunos : inteiro
-   media : real
-   i : inteiro
-   aprovados : inteiro
-   reprovados : inteiro
+   alunos : inteiro  // Quantidade de alunos
+   media : real   // Média dos alunos
+   i : inteiro    // Contador
+   aprovados : inteiro // Quantidade de aluno aprovado
+   reprovados : inteiro // Quantidade de aluno reprovado
 
 
 Inicio
@@ -18,17 +18,17 @@ Inicio
    escreval("Informe a quantidades de alunos: ")
    leia(alunos)
 
-   i <- 1
+   i <- 1   // Inicializar o contador em 1
 
    enquanto (i <= alunos) faca
       escreval("Informe a sua média:")
       leia(media)
-      se media >= 7 entao
+      se media >= 7 entao // Maior igual a 7 alundo aprovado
          aprovados <- aprovados + 1
-      senao
+      senao        // se não reprovado
          reprovados <- reprovados + 1
       fimse
-      i <- i + 1
+      i <- i + 1 // Incrementar +1 no contador a cada loop
    fimenquanto
 
    escreval("Quantidades de aprovados:", aprovados)
